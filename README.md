@@ -2,11 +2,11 @@
 ## Variance Inflation Factor in Python &amp; R
 
 A way to explore the relationship between the features is to check the **Variance Inflation Factor (VIF)**. The VIF measures the correlation among independent variables (predictors) in regression models. We refer to this type of correlation as multicollinearity. Excessive multicollinearity can cause problems for regression models. The steps of VIF analysis are as follows:
-1.	Drop target variable
-2.	Select one feature as new target,
-3.	Use predictor features to predict new target using a linear regression model,
-4.	Calculate R^2, (R squared is a measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model), then calculate vif= 1/(1-R^2)
-5.	Repeat steps 1-3 for all features
+1.	Drop target variable.
+2.	Select one feature as new target.
+3.	Use predictor features to predict new target using a linear regression model.
+4.	Calculate R^2, (R squared is a measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model), then calculate vif= 1/(1-R^2).
+5.	Repeat steps 1-3 for all features.
 
 A VIF greater than 10 is a signal that the model has a collinearity problem.
 

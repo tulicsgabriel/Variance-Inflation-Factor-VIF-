@@ -8,7 +8,18 @@ A way to explore the relationship between the features is to check the **Varianc
 4.	Calculate R^2, (R squared is a measure that represents the proportion of the variance for a dependent variable that's explained by an independent variable or variables in a regression model), then calculate vif= 1/(1-R^2).
 5.	Repeat steps 1-3 for all features.
 
-A VIF greater than 10 is a signal that the model has a collinearity problem.
+### Interpretation
+The rule of thumb for interpreting VIF values is:
+
+- 1 — features are not correlated
+- 1 < VIF < 5 — features are moderately correlated
+- VIF > 5 — features are highly correlated
+- VIF > 10 — high correlation between features and is cause for concern
+
+A VIF greater than 10 is a signal that the model has a collinearity problem. Some say any feature that has a VIF more than 5 should be removed from your training dataset. Whichever way you look at it, VIF values above 5 are suspisious, and values above 10 are downright bad.
+
+
+### About the example code
 
 I've noticed that the *variance_inflation_factor* library from *statsmodels.stats.outliers_influence* gives different results for the VIF than the vif function from the *R car library*.
 
